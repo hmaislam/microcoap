@@ -3,5 +3,5 @@
 
 #clean:
 #	rm -f coap
-
+MODULE:=$(shell basename $(CURDIR))
 include $(RIOTBASE)/Makefile.base
