@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 
     bzero(&servaddr,sizeof(servaddr));
     servaddr.sin6_family = AF_INET6;
-    servaddr.sin6_addr = in6addr_any;
+    //servaddr.sin6_addr = in6addr_any;
     servaddr.sin6_port = htons(PORT);  //default port 5683
     bind(fd,(struct sockaddr *)&servaddr, sizeof(servaddr));
 
