@@ -8,7 +8,7 @@
 
 #define PORT 5683
 
-int main(int argc, char **argv)
+/*int main(int argc, char **argv)
 {
     int fd;
     struct sockaddr_in6 servaddr, cliaddr;
@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 
     endpoint_setup();
 
-/*    while(1)
+    while(1)
     {
         int n, rc;
         socklen_t len = sizeof(cliaddr);
@@ -66,6 +66,6 @@ int main(int argc, char **argv)
                 sendto(fd, buf, rsplen, 0, (struct sockaddr *)&cliaddr, sizeof(cliaddr));
             }
         }
-    }*/
-}
+    }
+}*/
 
