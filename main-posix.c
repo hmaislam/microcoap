@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 
     endpoint_setup();
 
-    while(1)
+/*    while(1)
     {
         int n, rc;
         socklen_t len = sizeof(cliaddr);
@@ -62,10 +62,10 @@ int main(int argc, char **argv)
 #ifdef DEBUG
                 coap_dumpPacket(&rsppkt);
 #endif
-				// sending using ccnlite --check it
+		
                 sendto(fd, buf, rsplen, 0, (struct sockaddr *)&cliaddr, sizeof(cliaddr));
             }
         }
-    }
+    }*/
 }
 
