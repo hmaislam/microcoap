@@ -11,17 +11,17 @@
 int main(int argc, char **argv)
 {
     int fd;
-    struct sockaddr_in servaddr, cliaddr;
+    struct sockaddr_in6 servaddr, cliaddr;
     uint8_t buf[4096];
     uint8_t scratch_raw[4096];
     coap_rw_buffer_t scratch_buf = {scratch_raw, sizeof(scratch_raw)};
 
-    fd = socket(AF_INET,SOCK_DGRAM,0);  //UDP socket
+    fd = socket(AF_INET6,SOCK_DGRAM,0);  //UDP socket
 
     bzero(&servaddr,sizeof(servaddr));
-    servaddr.sin_family = AF_INET;
-    servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-    servaddr.sin_port = htons(PORT);  //default port 5683
+    servaddr.sin6_family = AF_INET6;
+    servaddr.sin6_addr = in6addr_any;;
+    servaddr.sin6_port = htons(PORT);  //default port 5683
     bind(fd,(struct sockaddr *)&servaddr, sizeof(servaddr));
 
     endpoint_setup();
